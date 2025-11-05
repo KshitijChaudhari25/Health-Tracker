@@ -1,0 +1,106 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827; /* bg-gray-900 */
+}
+
+:root {
+  --custom-dark: #111827;
+  --custom-gray: #374151;
+  --custom-green: #34D399;
+  --custom-green-hover: #10B981;
+  --custom-blue: #3B82F6;
+}
+
+/* Custom utility classes */
+.bg-custom-dark { background-color: var(--custom-dark); }
+.bg-custom-green { background-color: var(--custom-green); }
+.bg-custom-green-hover:hover { background-color: var(--custom-green-hover); }
+.text-custom-green { color: var(--custom-green); }
+.border-custom-gray { border-color: var(--custom-gray); }
+
+/* Card gradient */
+.card-gradient {
+    background: linear-gradient(145deg, #1f2937, #111827);
+    border: 1px solid var(--custom-gray);
+}
+
+/* Stat card styles */
+.stat-card {
+    background-color: #1f2937;
+    border: 1px solid var(--custom-gray);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(52, 211, 153, 0.1), 0 4px 6px -2px rgba(52, 211, 153, 0.05);
+}
+
+/* Form input styles */
+.form-input {
+    width: 100%;
+    background-color: #374151;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #4B5563;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--custom-green);
+    box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.5);
+}
+
+/* Animation for list items */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.saved-meal-item, .food-search-result { animation: fadeIn 0.3s ease-out; }
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 1rem;
+    transition: opacity 0.3s ease;
+}
+.modal.hidden { display: none; }
+.modal-content {
+    background-color: #1f2937; /* bg-gray-800 */
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    width: 100%;
+    max-width: 28rem; /* max-w-md */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Water Tracker Progress Bar */
+.water-progress-bar {
+    background-color: #374151; /* bg-gray-700 */
+    border-radius: 9999px;
+    overflow: hidden;
+}
+.water-progress {
+    background-color: var(--custom-blue);
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Enhancement: Interactive Button Hover Effect */
+.interactive-btn {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.interactive-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
